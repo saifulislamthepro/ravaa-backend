@@ -6,6 +6,7 @@ require('dotenv').config();
 
 const store_id = process.env.SSLCOMMERZ_STORE_ID;
 const store_passwd = process.env.SSLCOMMERZ_STORE_PASSWORD;
+const port = process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -141,6 +142,6 @@ app.post('/payment/cancel', async (req, res) => {
 });
 
 
-app.listen(5000, () => {
+app.listen(port, () => {
     console.log("Payment server running on port 5000");
 });
