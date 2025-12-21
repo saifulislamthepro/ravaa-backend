@@ -143,5 +143,5 @@ app.post('/payment/cancel', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log("Payment server running on port 5000");
+    console.log(`Payment server running on port ${port}`);
 });
